@@ -23,7 +23,6 @@ class UserController extends BaseController {
             $strErrorDesc = 'Method not supported';
             $strErrorHeader = 'HTTP/1.1 422 Unprocessable Entity';
         }
-        // send output 
         if (!$strErrorDesc) {
             $this->sendOutput(
                 $responseData,

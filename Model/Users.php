@@ -4,7 +4,7 @@
         protected static $conn;
         protected $error;
 
-        public function insert($user) {
+        private function insert($user) {
             require_once ('../DB.php');
             require_once '../Controller/API/UserController.php';
             $usersController = new UserController();
@@ -26,7 +26,7 @@
             }
         }
 
-        public function getList($email = "") {
+        private function getList($email = "") {
             require_once PROJECT_ROOT_PATH . "/DB.php";
             require_once '../Controller/API/UserController.php';
             $usersController = new UserController();
@@ -43,7 +43,7 @@
             }
         }
         
-        public function deleteUser($id = "") {
+        private function deleteUser($id = "") {
             require_once PROJECT_ROOT_PATH . "/DB.php";
             require_once '../Controller/API/UserController.php';
             $usersController = new UserController();
